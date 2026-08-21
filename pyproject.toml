@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sap-sod-evidence-audit"
+version = "0.1.0"
+description = "Offline and explainable SAP segregation-of-duties evidence analysis"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{name = "Alan Nogueira"}]
+keywords = ["sap", "segregation-of-duties", "it-audit", "grc", "sox", "python"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2",
+  "coverage>=7.6",
+  "ruff>=0.8",
+]
+
+[project.scripts]
+sap-sod-evidence-audit = "sap_sod_evidence_audit.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.coverage.run]
+source = ["sap_sod_evidence_audit"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true

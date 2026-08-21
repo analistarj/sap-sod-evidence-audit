@@ -1,0 +1,56 @@
+{
+  "version": "sap-sod-core-1.0.0",
+  "notice": "Synthetic project rules. Not an SAP GRC ruleset and not a compliance conclusion.",
+  "risks": [
+    {
+      "risk_id": "SOD-P2P-001",
+      "process": "P2P",
+      "title": "Maintain vendor master and execute payment",
+      "severity": "critical",
+      "actions": [
+        {"action": "VENDOR_MASTER_MAINTAIN", "activities": ["create", "change"]},
+        {"action": "PAYMENT_EXECUTE", "activities": ["execute"]}
+      ]
+    },
+    {
+      "risk_id": "SOD-P2P-002",
+      "process": "P2P",
+      "title": "Maintain vendor bank data and execute payment",
+      "severity": "critical",
+      "actions": [
+        {"action": "VENDOR_BANK_MAINTAIN", "activities": ["change"]},
+        {"action": "PAYMENT_EXECUTE", "activities": ["execute"]}
+      ]
+    },
+    {
+      "risk_id": "SOD-P2P-003",
+      "process": "P2P",
+      "title": "Create and release purchase order",
+      "severity": "high",
+      "actions": [
+        {"action": "PURCHASE_ORDER_CREATE", "activities": ["create", "change"]},
+        {"action": "PURCHASE_ORDER_RELEASE", "activities": ["release"]}
+      ]
+    },
+    {
+      "risk_id": "SOD-R2R-001",
+      "process": "R2R",
+      "title": "Post and approve general ledger journal",
+      "severity": "high",
+      "actions": [
+        {"action": "GL_JOURNAL_POST", "activities": ["post"]},
+        {"action": "GL_JOURNAL_APPROVE", "activities": ["approve"]}
+      ]
+    },
+    {
+      "risk_id": "SOD-O2C-001",
+      "process": "O2C",
+      "title": "Maintain customer master and post incoming receipt",
+      "severity": "critical",
+      "actions": [
+        {"action": "CUSTOMER_MASTER_MAINTAIN", "activities": ["create", "change"]},
+        {"action": "RECEIPT_POST", "activities": ["post"]}
+      ]
+    }
+  ]
+}

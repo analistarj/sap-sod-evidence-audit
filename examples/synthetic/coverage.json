@@ -1,0 +1,7 @@
+{
+  "source": "SM20-normalized-export",
+  "period_start": "2026-07-01",
+  "period_end": "2026-08-21",
+  "completeness": 0.9,
+  "notice": "Synthetic coverage estimate for tests only."
+}

@@ -1,0 +1,9 @@
+user_id,status,user_type,last_logon
+U_ALFA,active,dialog,2026-08-20
+U_BRAVO,active,dialog,2026-08-18
+U_CHARLIE,active,dialog,2026-08-17
+U_DELTA,active,dialog,2026-08-20
+U_ECHO,active,shared,2026-08-21
+U_FOXTROT,active,dialog,2026-08-19
+U_GOLF,active,dialog,2026-08-16
+U_LOCKED,locked,dialog,2026-01-10
